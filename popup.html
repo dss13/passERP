@@ -1,0 +1,37 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>ERP Auto-Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <!-- <script src="popup.js"></script> -->
+  </head>
+  <body>
+    <!-- <img id="image-result" hidden> -->
+    <h3>ERP Auto-Login</h3>
+    <input type="text" name="" placeholder="Roll no." class="user_id" required>
+    <input type="password" name="" placeholder="Password" class="password" required><br><br>
+    <input type="text" name="" placeholder="Question 1" class="ques1" required>
+    <input type="password" name="" placeholder="Answer" class="ans1" required><br><br>
+    <input type="text" name="" placeholder="Question 2" class="ques2" required>
+    <input type="password" name="" placeholder="Answer" class="ans2" required><br><br>
+    <input type="text" name="" placeholder="Question 3" class="ques3" required>
+    <input type="password" name="" placeholder="Answer" class="ans3" required><br><br>
+    <button class="done" type="submit">Done</button>
+    <p><b>Note:</b> Please make sure to enter the questions as provided by you on the ERP as they are <b>case-sensitive</b>. We don't save any of your credentials. Credentials will be stored on your PC itself.</p>
+    <div id="succes">Credentials saved</div>
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="req.js"></script>
+  </body>
+</html>
+
